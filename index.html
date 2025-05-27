@@ -1,0 +1,121 @@
+<!DOCTYPE html><html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Calculadora Estilo Mac</title>
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #d3d3d3, #ffffff);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }.calculadora {
+  background: #f2f2f2;
+  border-radius: 20px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  padding: 20px;
+  width: 300px;
+}
+
+.pantalla {
+  background: #e6e6e6;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: right;
+  font-size: 2em;
+  margin-bottom: 15px;
+  overflow-x: auto;
+}
+
+.teclas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background-color: #e0e0e0;
+}
+
+.operador {
+  background-color: #ffd966;
+}
+
+.igual {
+  background-color: #6fa8dc;
+  color: white;
+}
+
+.cero {
+  grid-column: span 2;
+}
+
+  </style>
+</head>
+<body>
+  <div class="calculadora">
+    <div class="pantalla" id="pantalla">0</div>
+    <div class="teclas">
+      <button onclick="limpiar()">C</button>
+      <button onclick="retroceso()">⌫</button>
+      <button onclick="agregar('%')">%</button>
+      <button class="operador" onclick="agregar('/')">/</button><button onclick="agregar('7')">7</button>
+  <button onclick="agregar('8')">8</button>
+  <button onclick="agregar('9')">9</button>
+  <button class="operador" onclick="agregar('*')">*</button>
+
+  <button onclick="agregar('4')">4</button>
+  <button onclick="agregar('5')">5</button>
+  <button onclick="agregar('6')">6</button>
+  <button class="operador" onclick="agregar('-')">-</button>
+
+  <button onclick="agregar('1')">1</button>
+  <button onclick="agregar('2')">2</button>
+  <button onclick="agregar('3')">3</button>
+  <button class="operador" onclick="agregar('+')">+</button>
+
+  <button class="cero" onclick="agregar('0')">0</button>
+  <button onclick="agregar('.')">.</button>
+  <button class="igual" onclick="calcular()">=</button>
+</div>
+
+  </div>  <script>
+    let pantalla = document.getElementById('pantalla');
+
+    function agregar(valor) {
+      if (pantalla.innerText === '0') pantalla.innerText = '';
+      pantalla.innerText += valor;
+    }
+
+    function limpiar() {
+      pantalla.innerText = '0';
+    }
+
+    function retroceso() {
+      pantalla.innerText = pantalla.innerText.slice(0, -1);
+      if (pantalla.innerText === '') pantalla.innerText = '0';
+    }
+
+    function calcular() {
+      try {
+        pantalla.innerText = eval(pantalla.innerText);
+      } catch {
+        pantalla.innerText = 'Error';
+      }
+    }
+  </script></body>
+</html>
