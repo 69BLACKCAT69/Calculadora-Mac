@@ -30,7 +30,7 @@ Hecha con puro **HTML, CSS y JavaScript**, totalmente funcional y visualmente at
 3. ¡Listo! Empieza a hacer cálculos con estilo
 
 ```bash
-git clone https://github.com/SantiagodeJesusSosaTrejo/Calculadora-Mac
+git clone https://github.com/69BLACKCAT69/Calculadora-Mac
 cd calculadora-mac
 open index.html  # o simplemente haz doble clic
 ```
