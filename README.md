@@ -19,8 +19,8 @@ Hecha con puro **HTML, CSS y JavaScript**, totalmente funcional y visualmente at
 
 > Puedes ver una demo abriendo el archivo `index.html` en tu navegador.
 
-![Screenshot](https://fakeimg.pl/300x200/cccccc/000/?text=Vista+Previa+Mac+Calc)  
-*(Puedes agregar tu propia captura cuando subas el proyecto)*
+**Captura pendiente...**  
+*(Cuando tengas una computadora puedes agregarla aquí)*
 
 ---
 
@@ -31,7 +31,7 @@ Hecha con puro **HTML, CSS y JavaScript**, totalmente funcional y visualmente at
 3. ¡Listo! Empieza a hacer cálculos con estilo
 
 ```bash
-git clone https://github.com/tu-usuario/calculadora-mac
+git clone https://github.com/SantiagodeJesusSosaTrejo/calculadora-mac
 cd calculadora-mac
 open index.html  # o simplemente haz doble clic
 ```
