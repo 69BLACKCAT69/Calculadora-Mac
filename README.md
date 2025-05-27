@@ -19,8 +19,7 @@ Hecha con puro **HTML, CSS y JavaScript**, totalmente funcional y visualmente at
 
 > Puedes ver una demo abriendo el archivo `index.html` en tu navegador.
 
-**Captura pendiente...**  
-*(Cuando tengas una computadora puedes agregarla aquí)*
+**Captura pendiente...**
 
 ---
 
